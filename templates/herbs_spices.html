@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class = "boxes">Below is a list of Beneficial Herbs & Spices</h1>
+<section>
+    
+    {% for herb in herbs %}
+        <h2 class = "toggleTag decorated-leaf" >{{ herb.name }}</h2>
+        <div class = "collapsed">
+        <h3>Key Nutrients: {{ herb.nutrients }}</h3>
+        <p>{{ herb.description }}</p>
+        <iframe width="560" height="315" src="{{ herb.video }}"
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen></iframe>
+      </div>
+    {% endfor %}
+
+</section>
+{% endblock %}

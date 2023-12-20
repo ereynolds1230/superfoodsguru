@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <header>
+    <h1 class = "boxes">Welcome to Superfoods Guru!</h1>
+    <p class = "statement">Never fear. Your Superfoods Guru is here! Please click around and explore the diveristy of the many
+        "superfoods" from around the world. Use the navigation bar to explore the website.
+    </p>
+    </header>
+
+    <section >
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><a href = "/foods">
+                <img class="d-block w-100 size" src="/images/foods1920w.jpg" alt="salad in bowl"
+                srcset=
+               "/images/foods600w.jpg 600w,
+                /images/foods1920w.jpg 1200w"
+                sizes="(max-witdth: 600px) 96vw,
+                (max-witdth: 1200px) 96vw">
+              </a>
+              </div>
+              <div class="carousel-item"><a href = "/herbs_spices">
+                <img class="d-block w-100 size" src="/images/herbs1920w.jpg" alt="herbs and spices"
+                srcset=
+               "/images/herbs600w.jpg 600w,
+                /images/herbs1920w.jpg 1200w"
+                sizes="(max-witdth: 600px) 96vw,
+                (max-witdth: 1200px) 96vw">
+              </a>
+              </div>
+              <div class="carousel-item"><a href = "/recipes">
+                <img class="d-block w-100 size" src="/images/recipes1920w.jpg" alt="food in frying pan"
+                srcset=
+               "/images/recipes600w.jpg 600w,
+                /images/recipes1920w.jpg 1200w"
+                sizes="(max-witdth: 600px) 96vw,
+                (max-witdth: 1200px) 96vw">
+              </a>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </section>
+{% endblock %} 

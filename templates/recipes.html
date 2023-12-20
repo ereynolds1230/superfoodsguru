@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class = "boxes">Below is a list of recipes that include Superfoods!</h1>
+<section>
+    
+        {% for recipe in recipes %}
+          <h2 class = "toggleTag decorated-utensils" >{{ recipe.name }}</h2>
+          <div class = "collapsed">
+            <h3>Included Superfoods: {{ recipe.ingredients }}</h3>
+            <h4>How to Prepare:</h4>
+            <p>Click on video below!</p>
+            <iframe src="{{ recipe.video }}"
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+          </div>
+        {% endfor %}
+    
+</section>
+{% endblock %}

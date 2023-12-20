@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class = "boxes">Below is a list of Foods Provided by Nature's Best</h1>
+<section>
+    
+        {% for food in foods %}
+          <h2 class = "toggleTag decorated-apple" >{{ food.name }}</h2>
+          <div class = "collapsed">
+            <h3>Key Nutrients: {{ food.nutrients }}</h3>
+            <p>{{ food.description }}</p>
+            <iframe src="{{ food.video }}"
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+          </div>
+        {% endfor %}
+    
+</section>
+{% endblock %}

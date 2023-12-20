@@ -1,0 +1,267 @@
+
+/* I am using the 'Ubuntu' font from Google fonts, which is linked in 'layout.html'
+   I am also using Boostrap library for ONLY the image carousel, and I have slightly 
+   customized it to fit my page properly.
+*/ 
+/*--------------Root color and style variables --------------*/
+:root {
+    --light-green: rgb(163, 228, 215);
+    --dark-green: rgb(23, 165, 137);
+    --transition-duration: 0.3s;
+    --transition-easing: ease-in-out;
+    --box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --white-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+  
+
+/*--------------Body and Nav--------------*/
+  body {
+    font-family: 'Ubuntu' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    color: white !important;
+    background-color: var(--light-green) !important;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+
+nav {
+    min-height: 50px;
+    background-color: var(--dark-green);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2%;
+    background-image: url('../images/pancake-menu.svg');
+    background-repeat: no-repeat;
+    border-radius: 1%;
+    
+}
+
+nav ul {
+  height: 90%;
+  width: 90%;
+  display: block;
+  justify-content: left;
+
+}
+
+li {
+  list-style: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+li a {
+  text-decoration: none !important;
+  color: white !important;
+  padding: .7em;
+  border-radius: 5%;
+  text-shadow: var(--text-shadow);
+
+}
+
+/*--------------Nav Toggle--------------*/
+nav.open {
+  background-image: url('/images/x-menu.svg');
+  background-repeat: no-repeat;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);  
+}
+.navClosed {
+    display: none;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-easing);
+}
+
+a:hover {
+  background-color: var(--light-green);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+  color: var(--dark-green) !important;
+  text-shadow: var(--white-shadow);
+}
+
+
+
+/*--------------Other HTML Tags --------------*/
+
+/*For Mostly H1 Tags*/
+.boxes {
+  background-color: var(--dark-green);
+  padding: .5em;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
+/*For Opening Paragraph on Home Page*/
+.statement {
+  background-color: var(--dark-green);
+  padding: 0.5em 4em 0.5em 4em;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
+/*For Video Links*/
+iframe {
+  width: 300px; 
+  height: 169px;
+  box-shadow: var(--box-shadow);
+}
+
+/*For Footer*/
+footer {
+  background-color: var(--dark-green);
+  padding: .3em;
+  margin-top: 2em;
+}
+
+
+
+
+
+/*--------------Photo Carousel Customization--------------*/
+#carouselExampleControls {
+  width: 70%; 
+  margin: auto; 
+  box-shadow: var(--box-shadow);
+}
+
+.carousel-item img {
+  max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+  max-height: 100%; /* Ensure the image doesn't exceed the height of its container */
+  margin: auto;
+}
+
+/*--------------Object List Toggle Divs--------------*/
+.toggleTag {
+  padding: .5em;
+  color: var(--dark-green);
+  border-bottom: 2px solid var(--dark-green);
+  text-shadow: var(--white-shadow);
+}
+
+.toggleTag:hover {
+  color: white;
+  background-color: var(--dark-green);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+  text-shadow: var(--text-shadow);
+}
+
+.openDiv {
+  width: 75%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center; 
+  background-color: white;
+  color: var(--dark-green);
+  padding: 2em;
+  margin:auto;
+}
+
+div.collapsed  {
+  display: none;
+}
+/*--------------Decorative Icons for List Items--------------*/
+
+/*For Herbs & Spices*/
+ .decorated-leaf::before {
+  content: "";
+  display: inline-block;
+  width: 30px; 
+  height: 30px; 
+  background: url(/images/leaf-light-green.png) no-repeat; 
+  background-size: contain; 
+  margin-right: 5px;
+}
+
+.decorated-leaf:hover::before {
+  content: "";
+  display: inline-block;
+  width: 30px; 
+  height: 30px;
+  background: url(/images/leaf-wht.png) no-repeat ;
+  background-size: contain;
+  margin-right: 5px; 
+}
+
+/*For Foods*/
+.decorated-apple::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Adjust the width of the image */
+  height: 40px; /* Adjust the height of the image */
+  background: url(/images/apple-light-green.png) no-repeat center center; /* Replace 'your-image.png' with your image path */
+  background-size: contain; /* Adjust to cover, contain, or other values as needed */
+  margin-right: 5px;
+}
+
+.decorated-apple:hover::before {
+  content: "";
+  display: inline-block;
+  width: 40px; /* Adjust the width of the image */
+  height: 40px; /* Adjust the height of the image */
+  background: url(/images/apple-wht.png) no-repeat center center; /* Replace 'your-image.png' with your image path */
+  background-size: contain; /* Adjust to cover, contain, or other values as needed */
+  margin-right: 5px; 
+}
+
+/*For Recipes*/
+.decorated-utensils::before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust the width of the image */
+  height: 30px; /* Adjust the height of the image */
+  background: url(/images/fk-light-green.png) no-repeat ; /* Replace 'your-image.png' with your image path */
+  background-size: contain; /* Adjust to cover, contain, or other values as needed */
+  margin-right: 5px;
+}
+
+.decorated-utensils:hover::before {
+  content: "";
+  display: inline-block;
+  width: 30px; /* Adjust the width of the image */
+  height: 30px; /* Adjust the height of the image */
+  background: url(/images/fk-wht.png) no-repeat ; /* Replace 'your-image.png' with your image path */
+  background-size: contain; /* Adjust to cover, contain, or other values as needed */
+  margin-right: 5px; 
+}
+
+/*--------------Media Query Set for Larger Screen Widths >= 700px--------------*/
+@media only screen and (min-width: 700px) {
+  nav.large {
+    background-image: none;
+
+  }
+
+  nav.large ul {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    padding-left: 0px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: .07em;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 1.25em;
+  }
+
+  iframe {
+    width: 560px; 
+    height: 315px;
+  }
+  
+}
